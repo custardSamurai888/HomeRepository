@@ -1,20 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>FIRST WEBSITE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix - Watch Movies & Shows</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #141414;
+            color: white;
+        }
+        .hero {
+            height: 80vh;
+            background: url('https://source.unsplash.com/1600x900/?movie,cinema') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: red;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: rgb(21, 0, 139);
+        }
+        .movies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+        }
+        .movie {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .movie:hover {
+            transform: scale(1.1);
+        }
+        .movie img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            margin-top: 30px;
+        }
+    </style>
 </head>
-
-<body style = "background-color: aquamarine;">
-
-    <h1>My First Heading</h1>
-    <p style = "background-color: beige;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis veniam eaque, ab adipisci fuga nesciunt
-        perferendis nulla est iste sequi qui ducimus laboriosam totam! Non sunt esse rerum debitis, hic, laboriosam
-        quidem repellat consequuntur eos quos nemo. Ipsam, laborum iste ad aut sequi architecto ipsa excepturi nulla
-        exercitationem asperiores? Excepturi sapiente cumque, architecto earum porro omnis nostrum veritatis dolores
-        ducimus ad voluptate atque quibusdam soluta, cum commodi odio similique. Unde minima aspernatur sint cumque
-        perferendis sequi odio voluptatibus fugit voluptas itaque animi voluptate exercitationem debitis, quaerat soluta
-        temporibus eius at numquam quisquam molestiae ab, placeat vitae aperiam. Provident, maxime sunt!</p>
-
+<body>
+    <header class="hero">
+        <h1>Unlimited Movies, TV Shows & More</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <a href="#" class="btn">Start Watching</a>
+    </header>
+    
+    <section class="movies">
+        <div class="movie"><img src="https://source.unsplash.com/300x450/?action,movie" alt="Movie 1"></div>
+        <div class="movie"><img src="https://source.unsplash.com/300x450/?drama,movie" alt="Movie 2"></div>
+        <div class="movie"><img src="https://source.unsplash.com/300x450/?sci-fi,movie" alt="Movie 3"></div>
+        <div class="movie"><img src="https://source.unsplash.com/300x450/?horror,movie" alt="Movie 4"></div>
+        <div class="movie"><img src="https://source.unsplash.com/300x450/?comedy,movie" alt="Movie 5"></div>
+        <div class="movie"><img src="https://source.unsplash.com/300x450/?thriller,movie" alt="Movie 6"></div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 StreamFlix. All rights reserved.</p>
+    </footer>
 </body>
-
 </html>
